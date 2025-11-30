@@ -1,0 +1,9 @@
+Intento de leer o escribir en la memoria protegida. A menudo, esto indica que hay otra memoria dañada.
+   en SDRSharp.Radio.Utils.Memcpy(Void* dest, Void* src, Int32 len)
+   en SDRSharp.Radio.ComplexFifoStream.DoPeek(Complex* buf, Int32 ofs, Int32 count)
+   en SDRSharp.Radio.ComplexFifoStream.Read(Complex* buf, Int32 ofs, Int32 count)
+   en SDRSharp.MainForm.ProcessFFT(Object parameter)
+   en System.Threading._ThreadPoolWaitCallback.WaitCallback_Context(Object state)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading._ThreadPoolWaitCallback.PerformWaitCallbackInternal(_ThreadPoolWaitCallback tpWaitCallBack)
+   en System.Threading._ThreadPoolWaitCallback.PerformWaitCallback(Object state)
