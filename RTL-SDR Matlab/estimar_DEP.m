@@ -1,18 +1,19 @@
 function [f, Sxx] = estimar_DEP(x, fs)
-    % Implementación estricta de la Ecuación 5 del Apunte de DEP
-    
+% ESTIMAR_DEP Calcula la Densidad Espectral de Potencia
+% Basado en la Ecuación (5) del apunte de la Cátedra.
+
     N = length(x);
     T = 1/fs;
     
-    % Calculo de la TDF (FFT)
+    % 1. Transformada de Fourier (FFT)
     X_f = fft(x);
     
-    % Centrado (fftshift) para ver frecuencias negativas y positivas
+    % 2. Centrar el espectro (frecuencias negativas a la izquierda)
     X_f = fftshift(X_f);
     
-    % Ecuación (5) del apunte: (T/N) * |X|^2
+    % 3. Cálculo de Potencia (Ec. 5 del apunte)
     Sxx = (T/N) * abs(X_f).^2;
     
-    % Eje de frecuencias
+    % 4. Generar eje de frecuencias
     f = linspace(-fs/2, fs/2, N);
 end
