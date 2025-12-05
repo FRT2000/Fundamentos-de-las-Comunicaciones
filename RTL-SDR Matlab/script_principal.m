@@ -22,7 +22,7 @@ N2 = 5;         % 256 kHz / 5 = 51.2 kHz (fs2 - Audio soportado por PC)
 
 %% 3. Procesamiento (Llamada a la función)
 disp('Procesando señal (Filtrado y Demodulación)...');
-[z_out, z_N2, z_B2, z_dis, y_N1, y_B1] = demodulador_digital(x, B1, N1, B2, N2, fs);
+[z_out, z_N2, z_B2, z_dis, y_N1, y_B1] = FM_DEMOD_RamirezTolentino(x, B1, N1, B2, N2, fs);
 
 % Recálculo de frecuencias de muestreo para los ejes de los gráficos
 fs1 = fs / N1;
